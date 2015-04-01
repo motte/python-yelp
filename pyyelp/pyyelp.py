@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
+from django.conf import settings
 
 import argparse
 import json
@@ -19,6 +20,10 @@ class Yelp(object):
 
         yelp = Yelp(...)
     """
+    API_HOST = settings.YELP_API_HOST or ''
+    SEARCH_PATH = '/v2/search/'
+    BUSINESS_PATH = '/v2/business/'
+    PHONE_PATH = '/v2/phone_search/'
 
     def __init__(self, **config):
         self._search_results = Search(**config)
