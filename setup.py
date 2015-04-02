@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 
-from disutils.core import setup
 from os.path import join
 
 from setuptools import setup, find_packages
@@ -24,9 +23,9 @@ setup(
     description='Python wrapper for the Yelp v2 api',
     long_description=open('README.rst').read(),
     license='ISC',
-    packages=find_packages(exclude=['*tests*']),
-    keywords = ['yelp', 'wrapper', 'api']
-    install_requires=map(str.strip, open(join('requirements', 'base.txt'))),
+    packages = [pyyelp.__name__],
+    keywords = ['yelp', 'wrapper', 'api'],
+    install_requires=map(str.strip,open(join('requirements', 'base.txt'))),
     include_package_data=True,
     classifiers=(
         'Programming Language :: Python',
