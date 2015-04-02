@@ -31,7 +31,7 @@ class Yelp(object):
     def __init__(self, **config):
         return
 
-    def yelp_request(self, host, path, url_params=None):
+    def request(self, host, path, url_params=None):
         """
         Prepares the OAuth authentication and send the request to the Yelp API
 
@@ -112,9 +112,40 @@ class Yelp(object):
         if deals_filter:
             url_params['deals_filter'] = deals_filter
 
-        print(url_params)
+        return self.request(API_HOST, SEARCH_PATH, url_params=url_params)
 
-        return self.yelp_request(API_HOST, SEARCH_PATH, url_params=url_params)
+    def get_business_by_id(self, business_id):
+        """
+
+        :param business_id:
+        :return:
+        """
+        business_path = BUSINESS_PATH + business_id
+
+        return self.request(API_HOST, business_path)
+
+    def search_by_phone_number(self, phone_number, cc='US', category=None):
+        """
+
+        :param phone_number:
+        :param cc: string country code by ISO 3166-1 alpha-2 country code e.g. GB for United Kingdom
+            refer to: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+        :param category:
+        :return: JSON response
+        """
+        url_params = {
+            'phone': phone_number
+        }
+
+        if cc is not 'US' and cc is str:
+            url_params['cc'] = cc
+
+        if category and category is str:
+            url_params['category'] = category
+
+        phone_path = PHONE_PATH + phone_number
+
+        return self.request(API_HOST, phone_path, url_params=url_params)
 
     def _set_api_host(self):
         if settings.YELP_API_HOST is not None:
