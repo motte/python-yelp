@@ -7,26 +7,30 @@ Pyyelp is a python wrapper for the **Yelp API v2**
 
 Fast install
 -------
-::
    pip install pyyelp
 
 - Add the following in settings.py or .bash_profile
 
-```python
+``python
 YELP_API_CONSUMER_KEY={{ CONSUMER_KEY }}
+
 YELP_API_CONSUMER_SECRET={{ CONSUMER_SECRET }}
+
 YELP_API_TOKEN={{ TOKEN }}
+
 YELP_API_TOKEN_SECRET={{ SECRET_TOKEN }}
-```
+``
 
 Fast example
 -------
 ::
-```python
+``python
 from pyyelp import Yelp
+
 yelp = Yelp()
+
 search_result = yelp.search(term='foo store', lat='', lon='')
-```
+``
 
 TODO
 -------
