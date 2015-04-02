@@ -21,7 +21,7 @@ setup(
     url='https://github.com/motte/python-yelp',
     download_url = 'https://github.com/motte/python-yelp/tarball/{0}'.format(pyyelp.__version__),
     description='Python wrapper for the Yelp v2 api',
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     license='ISC',
     packages = [pyyelp.__name__],
     keywords = ['yelp', 'wrapper', 'api'],
