@@ -3,6 +3,8 @@ Pyyelp
 
 Pyyelp is a python wrapper for the **Yelp API v2**
 
+I wrote this wrapper because I couldn't find a comprehensive, lightweight Yelp API wrapper for Python.  This wrapper has methods for Search, Business, and Phone APIs and supports all associated parameters - all in a nice, lightweight package.
+
 `Yelp API v2 docs <https://www.yelp.com/developers/documentation>`
 
 Requires
