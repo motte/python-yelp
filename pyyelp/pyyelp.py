@@ -25,7 +25,8 @@ class Yelp(object):
     """
     Example:
 
-        yelp = Yelp(...)
+        yelp = Yelp()
+        yelp.search(term='moo')
     """
 
     def __init__(self, **config):
