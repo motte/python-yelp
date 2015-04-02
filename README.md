@@ -1,4 +1,4 @@
-Pyyelp
+PyYelp
 =======
 
 Pyyelp is a python wrapper for the **Yelp API v2**
