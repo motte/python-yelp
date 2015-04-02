@@ -90,10 +90,14 @@ class Yelp(object):
         """
 
         url_params = {
-            'term': term.replace(' ', '+'),
-            'location': location.replace(' ', '+'),
             'limit': search_limit
         }
+
+        if term is not None:
+            url_params['term'] = term.replace(' ', '+')
+
+        if location is not None:
+            url_params['location'] = location.replace(' ', '+')
 
         if latitude is not None and longitude is not None and latitude is int and longitude is int:
             url_params['cll'] = '{0},{1}'.format(latitude, longitude)
