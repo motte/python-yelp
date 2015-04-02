@@ -20,10 +20,10 @@ pip install pyyelp
 - Add the following in **settings.py** or .bash_profile
 
 ```python
-YELP_API_CONSUMER_KEY={{ CONSUMER_KEY }}
-YELP_API_CONSUMER_SECRET={{ CONSUMER_SECRET }}
+YELP_CONSUMER_KEY={{ CONSUMER_KEY }}
+YELP_CONSUMER_SECRET={{ CONSUMER_SECRET }}
 YELP_API_TOKEN={{ TOKEN }}
-YELP_API_TOKEN_SECRET={{ SECRET_TOKEN }}
+YELP_API_SECRET={{ SECRET_TOKEN }}
 ```
 
 Fast example
