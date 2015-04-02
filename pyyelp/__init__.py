@@ -9,4 +9,3 @@ __license__ = 'ISC'
 __copyright__ = 'Copyright 2015 Michael Otte'
 
 
-from pyyelp import Yelp

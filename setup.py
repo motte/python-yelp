@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 
-
+from disutils.core import setup
 from os.path import join
 
 from setuptools import setup, find_packages
@@ -20,15 +20,12 @@ setup(
     author=pyyelp.__author__,
     author_email=pyyelp.__email__,
     url='https://github.com/motte/python-yelp',
+    download_url = 'https://github.com/motte/python-yelp/tarball/{0}'.format(pyyelp.__version__),
     description='Python wrapper for the Yelp v2 api',
     long_description=open('README.rst').read(),
     license='ISC',
     packages=find_packages(exclude=['*tests*']),
-    test_suite='nose.collector',
-    tests_require=[
-        'nose',
-        'mock',
-    ],
+    keywords = ['yelp', 'wrapper', 'api']
     install_requires=map(str.strip, open(join('requirements', 'base.txt'))),
     include_package_data=True,
     classifiers=(
