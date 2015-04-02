@@ -11,7 +11,9 @@ Requires
 
 Fast install
 -------
-   **pip install pyyelp**
+```
+**pip install pyyelp**
+```
 
 - Add the following in **settings.py** or .bash_profile
 
