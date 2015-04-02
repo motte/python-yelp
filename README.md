@@ -26,19 +26,19 @@ YELP_API_TOKEN_SECRET={{ SECRET_TOKEN }}
 
 Fast example
 -------
-
+**Term and Location are required for Search**
 ```python
-from pyyelp import Yelp
+from pyyelp.pyyelp import Yelp
 
 yelp = Yelp()
-search_result = yelp.search(term="foo store")
+search_result = yelp.search(term="foo store", location="California")
 ```
 
 Examples
 -------
 1. **Search** Example
 ```python
-from pyyelp import Yelp
+from pyyelp.pyyelp import Yelp
 
 yelp = Yelp()
 search_result = yelp.search(term="Don Quixote's Restaurant", location="Santa Cruz, California", search_limit=25)
@@ -46,7 +46,7 @@ search_result = yelp.search(term="Don Quixote's Restaurant", location="Santa Cru
 
 2. **Business** Example
 ```python
-from pyyelp import Yelp
+from pyyelp.pyyelp import Yelp
 
 yelp = Yelp()
 business_result = yelp.get_business_by_id("taqueria-los-gallos-newark")
