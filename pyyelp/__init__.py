@@ -2,7 +2,7 @@
 
 
 __title__ = 'pyyelp'
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 __author__ = 'Michael Otte'
 __email__ = 'michaelotte2013@gmail.com'
 __license__ = 'ISC'
