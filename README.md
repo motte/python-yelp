@@ -41,7 +41,7 @@ Examples
 from pyyelp.pyyelp import Yelp
 
 yelp = Yelp()
-search_result = yelp.search(term="Don Quixote's Restaurant", location="Santa Cruz, California", search_limit=25)
+search_result = yelp.search(term="Don Quixote's Restaurant", location="Santa Cruz, California")
 ```
 
 2. **Business** Example
