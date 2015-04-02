@@ -59,7 +59,7 @@ class Yelp(object):
         oauth_request.sign_request(oauth2.SignatureMethod_HMAC_SHA1(), consumer, token)
         signed_url = oauth_request.to_url()
 
-        print u'Querying {0} ...'.format(url)
+        # print u'Querying {0} ...'.format(url)
 
         conn = urllib2.urlopen(signed_url, None)
         try:
